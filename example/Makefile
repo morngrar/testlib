@@ -1,4 +1,4 @@
-CPPFLAGS = -g -Wall -I/home/sk/Documents/devel/c++/include
+CPPFLAGS = -g --std=c++1z -Wall -I/home/sk/Documents/devel/c++/include
 LDFLAGS = -L/home/sk/Documents/devel/c++/lib -ltesting
 
 test: main.o
