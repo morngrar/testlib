@@ -1,7 +1,8 @@
 # Custom stuff
 
-# unit tests
-tests
+# tests
+test
+example/test
 
 # lib folder
 lib/
