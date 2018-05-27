@@ -1,3 +1,13 @@
+# Custom stuff
+
+# unit tests
+tests
+
+# lib folder
+lib/
+
+#################
+
 # Prerequisites
 *.d
 
