@@ -1,14 +1,14 @@
-OBJS = main.o testing.o
-CPPFLAGS = -g -Wall -std=c++1z
+OBJS = main.o testlib.o
+CPPFLAGS = -std=c++17 -g -Wall
 LDFLAGS = #-L./lib -ltesting
 
 test: $(OBJS)
 	g++  -o test $(OBJS) $(LDFLAGS)
-lib: testing.o
-	ar crf lib/libtesting.a testing.o
+lib: testlib.o
+	ar crf lib/libtestlib.a testlib.o
 main.o: main.cpp
-	g++ -c main.cpp
-testing.o: testing.h testing.cpp
-	g++ $(CPPFLAGS) -c testing.cpp
+	g++ $(CPPFLAGS) -c main.cpp
+testlib.o: testlib.h testlib.cpp
+	g++ $(CPPFLAGS) -c testlib.cpp
 clean:
-	rm -f core test $(OBJS) 
+	rm -f core test $(OBJS)

@@ -1,6 +1,7 @@
-#include <iostream>
-#include "testing.h"
+// Example code, to show the usage of testlib, not using lambda functions
 
+#include <iostream>
+#include "testlib.h"
 
 
 bool hello1()
