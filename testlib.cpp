@@ -31,7 +31,7 @@ namespace tst
       int failed = 0;
       int total = 0;
 
-      for (function : functions) {
+      for (auto function : functions) {
           if (function())
               passed++;
           else
