@@ -1,3 +1,5 @@
+// Example code, showing the use of testlib, without using lambda functions
+
 #include <iostream>
 #include <string>
 #include "testlib.h"
@@ -33,7 +35,7 @@ bool another_test()
         tst::failed_report(
             "add()",
             "4 + 4 should be 8.",
-            std::to_string(ret)  // this requires C++11 compilation (or later)
+            std::to_string(ret)
         );
         return false;
     } else {

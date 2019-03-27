@@ -23,13 +23,18 @@
 
 namespace tst
 {
+    const char VERSION[] = "1.0"; // Library version
+
     class TestStack {
+
+        // Internal vector containing pointers to test-functions
         std::vector<bool (*)()> functions;
 
     public:
-        void push(bool (*function)());
-        bool run_tests();
+        void push(bool (*function)()); // Pushes function pointers onto stack
+        bool run_tests();              // Runs all functions on stack
     };
 
+    // A prettified output of a failed test, to be called by test-functions
     void failed_report(std::string func_name, std::string msg, std::string ret);
 }

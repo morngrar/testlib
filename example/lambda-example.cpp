@@ -1,3 +1,6 @@
+// Example code, showing the use of testlib, employing lambda expressions
+// instead of global functions. It does the same as the code in example.cpp
+
 #include <iostream>
 #include <string>
 #include "testlib.h"
