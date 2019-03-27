@@ -1,8 +1,8 @@
 # Custom stuff
 
-# tests
-test
-example/test
+# examples
+example/example
+example/lambda-example
 
 # lib folder
 lib/

@@ -1,9 +1,14 @@
-CPPFLAGS = -g --std=c++1z -Wall -I/home/sk/Documents/devel/c++/include
-LDFLAGS = -L/home/sk/Documents/devel/c++/lib -ltesting
+CPPFLAGS = -g --std=c++17 -Wall -I../
+LDFLAGS = -L../lib -ltestlib
 
-test: main.o
-	g++ -o test main.o $(LDFLAGS)
-main.o: main.cpp
-	g++ $(CPPFLAGS) -c main.cpp
+all: example lambda-example
+example: example.o
+	g++ -o example example.o $(LDFLAGS)
+example.o: example.cpp
+	g++ $(CPPFLAGS) -c example.cpp
+lambda-example: lambda-example.o
+	g++ -o lambda-example lambda-example.o $(LDFLAGS)
+lambda-example.o: lambda-example.cpp
+	g++ $(CPPFLAGS) -c lambda-example.cpp
 clean:
-	rm -f core test main.o
+	rm -f core test example.o
